@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Portfolio Januar Adi Surya Wijaya - WhatsApp Bot & Web Scraping Specialist">
+    <meta name="author" content="Jaxzynnice">
+    <title>Jaxzynnice | Januar Wijaya - Automation Expert</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/glassmorphism.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Loading Skeleton Overlay -->
+    <div id="skeletonLoader" class="skeleton-loader">
+        <div class="skeleton-container">
+            <div class="skeleton-navbar"></div>
+            <div class="skeleton-hero"></div>
+            <div class="skeleton-skills"></div>
+            <div class="skeleton-projects"></div>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="mainContent" style="display: none;">
+        <!-- Navigation -->
+        <nav class="navbar glass-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i>
+                    <span class="logo-text">Jaxzyn<span class="ice-text">nice</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge glass-badge">
+                            <i class="fab fa-whatsapp"></i> 5+ Years Experience
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="greeting">Hi, I'm</span>
+                            <span class="name-gradient">Januar Adi Surya</span>
+                            <span class="nickname">aka <span class="ice-name">Jaxzynnice</span></span>
+                        </h1>
+                        <div class="typed-wrapper">
+                            <span id="typedText" class="typed-text"></span>
+                            <span class="typed-cursor">|</span>
+                        </div>
+                        <p class="hero-description">
+                            WhatsApp Bot Architect • Web Scraping Engineer • REST API Specialist • Web Hunter
+                            <br>Building automation solutions with JavaScript/Node.js for 5+ years.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-card glass-card-sm">
+                                <h3>50+</h3>
+                                <p>Bots Deployed</p>
+                            </div>
+                            <div class="stat-card glass-card-sm">
+                                <h3>10M+</h3>
+                                <p>Messages Processed</p>
+                            </div>
+                            <div class="stat-card glass-card-sm">
+                                <h3>200+</h3>
+                                <p>APIs Integrated</p>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn-primary" id="contactBtn">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </button>
+                            <button class="btn-secondary" id="projectsBtn">
+                                <i class="fas fa-code"></i> View Projects
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="mock-chat glass-card">
+                            <div class="chat-header">
+                                <div class="chat-avatar">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="chat-info">
+                                    <h4>WhatsApp Bot</h4>
+                                    <span>Online • Ready</span>
+                                </div>
+                            </div>
+                            <div class="chat-messages" id="chatMessages">
+                                <div class="message received">
+                                    <div class="message-content">🤖 Bot aktif! Ketik .help untuk melihat fitur</div>
+                                    <span class="message-time">10:42</span>
+                                </div>
+                                <div class="message sent">
+                                    <div class="message-content">.scrape example.com</div>
+                                    <span class="message-time">10:43</span>
+                                </div>
+                                <div class="message received typing" id="typingIndicator">
+                                    <div class="typing-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Core <span class="gradient-text">Expertise</span></h2>
+                    <p class="section-subtitle">Mastering the art of automation and data extraction</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Botting</h3>
+                        <p>Multi-device, Baileys, webhook integration, group management, AI responses</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="98"></div>
+                        </div>
+                        <span class="skill-percent">98%</span>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h3>Web Scraping (JS)</h3>
+                        <p>Puppeteer, Playwright, Cheerio, anti-detection, proxy rotation</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>REST API & Backend</h3>
+                        <p>Express.js, JWT, rate limiting, microservices, WebSocket</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Web Hunting/OSINT</h3>
+                        <p>Reconnaissance, subdomain enumeration, endpoint discovery</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Carousel -->
+        <section id="tech-stack" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tech <span class="gradient-text">Arsenal</span></h2>
+                    <p class="section-subtitle">Tools & technologies I work with daily</p>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Icons will be injected via JS -->
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="gradient-text">Automation</span></h2>
+                    <p class="section-subtitle">Real-world projects that deliver results</p>
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-glass glass-card">
+                    <div class="contact-content">
+                        <h2>Let's Build Something <span class="gradient-text">Powerful</span></h2>
+                        <p>Need a custom WhatsApp bot, large-scale scraping solution, or robust API backend?</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>+62 812 3456 7890</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="far fa-envelope"></i>
+                                <span>januar@jaxzynnice.dev</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/jaxzynnice</span>
+                            </div>
+                        </div>
+                        <div class="contact-buttons">
+                            <button class="btn-primary" id="waDirect">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Me
+                            </button>
+                            <button class="btn-secondary" id="copyEmail">
+                                <i class="far fa-copy"></i> Copy Email
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Jaxzynnice</span>
+                    </div>
+                    <p class="copyright">© 2025 Januar Adi Surya Wijaya (Jaxzynnice) — Automation Specialist</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/skeleton.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
